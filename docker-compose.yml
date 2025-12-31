@@ -1,0 +1,64 @@
+#version: "3.8"
+services:
+  rasa_server:
+    container_name: rasa_server
+    build:
+      context: ./chatbot
+    working_dir: /app
+    volumes:
+      - ./chatbot:/app
+    ports:
+      - "5005:5005"
+    command:
+      - run
+      - --enable-api
+      - --cors
+      - "*"
+      - --debug
+
+  action_server:
+    container_name: "action_server"
+    build: 
+      context: ./chatbot/actions
+    volumes:
+      - ./chatbot/actions:/app/actions
+      - ./chatbot/data:/app/data
+    ports:
+      - 5055:5055
+
+  db:
+    container_name: "postgresql_db"
+    image: postgres:15
+    restart: always
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - ./.env
+
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4
+    env_file:
+      - ./.env
+    ports:
+      - "5050:80"
+    depends_on:
+      - db
+
+  app:
+    container_name: app
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    command: bash -c "uvicorn run:app --host 0.0.0.0 --port 8000 --reload"
+    stdin_open: true
+    tty: true
+    restart: always
+
+
+volumes:
+  postgres_data:
