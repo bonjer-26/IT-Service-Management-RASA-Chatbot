@@ -1,0 +1,296 @@
+2025-12-22 06:49:01,324 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2025-12-22 06:49:01,328 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2025-12-22 06:49:01,330 [DEBUG]  Using the default number of Sanic workers (1).
+2025-12-22 06:49:01,386 [DEBUG]  Skipping telemetry reporting: no license hash found.
+2025-12-22 06:49:01,494 [DEBUG]  Connected to InMemoryTrackerStore.
+2025-12-22 06:49:01,495 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2025-12-22 06:49:01,496 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2025-12-22 06:49:01,509 [INFO ]  Rasa server is up and running.
+2025-12-22 06:49:01,514 [INFO ]  Enabling coroutine debugging. Loop id 94072456002720.
+2025-12-22 07:15:00,861 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2025-12-22 07:15:00,865 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2025-12-22 07:15:00,866 [DEBUG]  Using the default number of Sanic workers (1).
+2025-12-22 07:15:00,904 [DEBUG]  Skipping telemetry reporting: no license hash found.
+2025-12-22 07:15:00,974 [DEBUG]  Connected to InMemoryTrackerStore.
+2025-12-22 07:15:00,975 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2025-12-22 07:15:00,977 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2025-12-22 07:15:00,986 [INFO ]  Rasa server is up and running.
+2025-12-22 07:15:00,992 [INFO ]  Enabling coroutine debugging. Loop id 108805369995232.
+2025-12-22 07:33:23,108 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2025-12-22 07:33:23,112 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2025-12-22 07:33:23,113 [DEBUG]  Using the default number of Sanic workers (1).
+2025-12-22 07:33:23,146 [DEBUG]  Skipping telemetry reporting: no license hash found.
+2025-12-22 07:33:23,215 [DEBUG]  Connected to InMemoryTrackerStore.
+2025-12-22 07:33:23,217 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2025-12-22 07:33:23,219 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2025-12-22 07:33:23,229 [INFO ]  Rasa server is up and running.
+2025-12-22 07:33:23,233 [INFO ]  Enabling coroutine debugging. Loop id 96977658143088.
+2025-12-22 07:42:41,742 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2025-12-22 07:42:41,745 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2025-12-22 07:42:41,746 [DEBUG]  Using the default number of Sanic workers (1).
+2025-12-22 07:42:41,804 [DEBUG]  Skipping telemetry reporting: no license hash found.
+2025-12-22 07:42:41,920 [DEBUG]  Connected to InMemoryTrackerStore.
+2025-12-22 07:42:41,922 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2025-12-22 07:42:41,925 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2025-12-22 07:42:41,946 [INFO ]  Rasa server is up and running.
+2025-12-22 07:42:41,951 [INFO ]  Enabling coroutine debugging. Loop id 108751258033120.
+2025-12-22 07:44:37,414 [INFO ]  Ignoring message as there is no agent to handle it.
+2025-12-22 07:45:48,627 [INFO ]  Ignoring message as there is no agent to handle it.
+2025-12-22 07:53:43,745 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2025-12-22 07:53:43,748 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2025-12-22 07:53:43,750 [DEBUG]  Using the default number of Sanic workers (1).
+2025-12-22 07:53:43,785 [DEBUG]  Skipping telemetry reporting: no license hash found.
+2025-12-22 07:53:43,834 [DEBUG]  Connected to InMemoryTrackerStore.
+2025-12-22 07:53:43,835 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2025-12-22 07:53:43,836 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2025-12-22 07:53:43,845 [INFO ]  Rasa server is up and running.
+2025-12-22 07:53:43,847 [INFO ]  Enabling coroutine debugging. Loop id 94917230953440.
+2025-12-22 07:58:04,671 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2025-12-22 07:58:04,674 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2025-12-22 07:58:04,676 [DEBUG]  Using the default number of Sanic workers (1).
+2025-12-22 07:58:04,715 [DEBUG]  Skipping telemetry reporting: no license hash found.
+2025-12-22 07:58:04,783 [DEBUG]  Connected to InMemoryTrackerStore.
+2025-12-22 07:58:04,784 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2025-12-22 07:58:04,785 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2025-12-22 07:58:04,795 [INFO ]  Rasa server is up and running.
+2025-12-22 07:58:04,798 [INFO ]  Enabling coroutine debugging. Loop id 109284535591312.
+2025-12-22 07:59:31,834 [INFO ]  Ignoring message as there is no agent to handle it.
+2025-12-22 08:25:32,450 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2025-12-22 08:25:32,454 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2025-12-22 08:25:32,455 [DEBUG]  Using the default number of Sanic workers (1).
+2025-12-22 08:25:32,487 [DEBUG]  Skipping telemetry reporting: no license hash found.
+2025-12-22 08:25:32,555 [DEBUG]  Connected to InMemoryTrackerStore.
+2025-12-22 08:25:32,557 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2025-12-22 08:25:32,558 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2025-12-22 08:25:32,574 [INFO ]  Rasa server is up and running.
+2025-12-22 08:25:32,583 [INFO ]  Enabling coroutine debugging. Loop id 109581084492064.
+2025-12-22 08:27:27,798 [INFO ]  Ignoring message as there is no agent to handle it.
+2025-12-23 02:08:58,206 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2025-12-23 02:08:58,209 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2025-12-23 02:08:58,211 [DEBUG]  Using the default number of Sanic workers (1).
+2025-12-23 02:09:04,723 [DEBUG]  Skipping telemetry reporting: no license hash found.
+2025-12-23 02:09:04,789 [DEBUG]  Connected to InMemoryTrackerStore.
+2025-12-23 02:09:04,790 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2025-12-23 02:09:04,791 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2025-12-23 02:09:04,801 [INFO ]  Loading model /app/models/20251222-084535-wintry-shot.tar.gz...
+2025-12-23 02:09:10,454 [DEBUG]  Extracted model to '/tmp/tmpv2uf9gpm'.
+2025-12-23 02:09:10,458 [DEBUG]  Node 'nlu_message_converter' loading 'NLUMessageConverter.load' and kwargs: '{}'.
+2025-12-23 02:09:10,459 [DEBUG]  Node 'run_WhitespaceTokenizer0' loading 'WhitespaceTokenizer.load' and kwargs: '{}'.
+2025-12-23 02:09:10,462 [DEBUG]  Node 'run_RegexFeaturizer1' loading 'RegexFeaturizer.load' and kwargs: '{}'.
+2025-12-23 02:09:10,463 [DEBUG]  Resource 'train_RegexFeaturizer1' was requested for reading.
+2025-12-23 02:09:10,463 [DEBUG]  Node 'run_LexicalSyntacticFeaturizer2' loading 'LexicalSyntacticFeaturizer.load' and kwargs: '{}'.
+2025-12-23 02:09:10,464 [DEBUG]  Resource 'train_LexicalSyntacticFeaturizer2' was requested for reading.
+2025-12-23 02:09:10,480 [DEBUG]  Node 'run_CountVectorsFeaturizer3' loading 'CountVectorsFeaturizer.load' and kwargs: '{}'.
+2025-12-23 02:09:10,481 [DEBUG]  Resource 'train_CountVectorsFeaturizer3' was requested for reading.
+2025-12-23 02:09:10,483 [DEBUG]  Node 'run_CountVectorsFeaturizer4' loading 'CountVectorsFeaturizer.load' and kwargs: '{}'.
+2025-12-23 02:09:10,483 [DEBUG]  Resource 'train_CountVectorsFeaturizer4' was requested for reading.
+2025-12-23 02:09:10,488 [DEBUG]  Node 'run_DIETClassifier5' loading 'DIETClassifier.load' and kwargs: '{}'.
+2025-12-23 02:09:10,489 [DEBUG]  Resource 'train_DIETClassifier5' was requested for reading.
+2025-12-23 02:09:10,491 [DEBUG]  Loading the model from /tmp/tmpnkemrmmn/train_DIETClassifier5/DIETClassifier.tf_model with finetune_mode=False...
+2025-12-23 02:09:10,668 [DEBUG]  Following metrics will be logged during training: 
+2025-12-23 02:09:10,669 [DEBUG]    t_loss (total loss)
+2025-12-23 02:09:10,669 [DEBUG]    i_acc (intent acc)
+2025-12-23 02:09:10,670 [DEBUG]    i_loss (intent loss)
+2025-12-23 02:09:10,670 [DEBUG]    e_f1 (entity f1)
+2025-12-23 02:09:10,671 [DEBUG]    e_loss (entity loss)
+2025-12-23 02:09:51,861 [DEBUG]  Finished loading the model.
+2025-12-23 02:09:51,861 [DEBUG]  Node 'run_EntitySynonymMapper6' loading 'EntitySynonymMapper.load' and kwargs: '{}'.
+2025-12-23 02:09:51,862 [DEBUG]  Resource 'train_EntitySynonymMapper6' was requested for reading.
+2025-12-23 02:09:51,863 [DEBUG]  Node 'run_ResponseSelector7' loading 'ResponseSelector.load' and kwargs: '{}'.
+2025-12-23 02:09:51,863 [DEBUG]  Resource 'train_ResponseSelector7' was requested for reading.
+2025-12-23 02:09:51,864 [DEBUG]  Failed to load ABCMeta from model storage. Resource 'train_ResponseSelector7' doesn't exist.
+2025-12-23 02:09:51,864 [DEBUG]  Resource 'train_ResponseSelector7' was requested for reading.
+2025-12-23 02:09:51,865 [DEBUG]  Failed to load ResponseSelector from model storage. Resource 'train_ResponseSelector7' doesn't exist.
+2025-12-23 02:09:51,865 [DEBUG]  Node 'run_FallbackClassifier8' loading 'FallbackClassifier.load' and kwargs: '{}'.
+2025-12-23 02:09:51,866 [DEBUG]  Node 'run_RegexMessageHandler' loading 'RegexMessageHandler.load' and kwargs: '{}'.
+2025-12-23 02:09:51,866 [DEBUG]  Node 'domain_provider' loading 'DomainProvider.load' and kwargs: '{}'.
+2025-12-23 02:09:51,867 [DEBUG]  Resource 'domain_provider' was requested for reading.
+2025-12-23 02:09:51,908 [DEBUG]  Node 'run_MemoizationPolicy0' loading 'MemoizationPolicy.load' and kwargs: '{}'.
+2025-12-23 02:09:51,908 [DEBUG]  Resource 'train_MemoizationPolicy0' was requested for reading.
+2025-12-23 02:09:51,910 [DEBUG]  Node 'run_TEDPolicy1' loading 'TEDPolicy.load' and kwargs: '{}'.
+2025-12-23 02:09:51,910 [DEBUG]  Resource 'train_TEDPolicy1' was requested for reading.
+2025-12-23 02:09:51,912 [DEBUG]  Loading the model from /tmp/tmpnkemrmmn/train_TEDPolicy1/ted_policy.tf_model with finetune_mode=False...
