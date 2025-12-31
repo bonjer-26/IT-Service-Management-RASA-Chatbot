@@ -1,5 +1,6 @@
 
 ## IT Service Management RASA Chatbot
+![Uploading bot_1.png…]()
 
 This project involved developing an IT Helpdesk chatbot using the RASA framework, which serves as a user assistant for Information Technology Systems Management (TISM). The chatbot interacts with users to understand their requests and automate helpdesk operations.
 
