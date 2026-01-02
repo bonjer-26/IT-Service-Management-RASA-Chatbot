@@ -1,0 +1,13 @@
+"""
+# This documentation to create model training
+# MANDATORY
+
+Run command below:
+	docker compose down -v
+	docker compose build --no-cache
+	docker compose up -d
+	docker exec -it rasa_server rasa train --force
+
+After model training is succefully finished. We can check the model file should be appeared on:
+../app_folder_name/chatbot/models
+"""
