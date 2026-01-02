@@ -1,0 +1,309 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hei
+    - halo
+    - hai
+    - hi
+    - selamat pagi
+    - selamat siang
+    - selamat malam
+    - hoy
+    - hei kawan
+    - hello
+    - assalamualaikum
+    - Dear tim IT
+    - Dear Helpdesk
+
+- intent: goodbye
+  examples: |
+    - selamat tinggal
+    - sampai jumpa lagi
+    - dada
+    - selamat tinggal
+    - semoga harimu menyenangkan
+    - sampai jumpa lagi
+    - bye bye
+    - sampai jumpa nanti
+    - regards
+    - terima kasih atas bantuannya
+    - terima kasih atas kerjasamanya
+    - salam
+    - waalaikumsalam
+
+- intent: affirm
+  examples: |
+    - ya
+    - y
+    - betul
+    - betul sekali
+    - baiklah
+    - baiklah kalau begitu
+    - memang
+    - tentu saja
+    - kedengarannya bagus
+    - benar
+    - benar sekali
+
+- intent: deny
+  examples: |
+    - tidak
+    - n
+    - tidak pernah
+    - kurasa tidak
+    - tidak suka itu
+    - tidak mungkin
+    - tidak juga
+    - bukan begitu
+    - salah
+    - tidak benar
+    - koreksi
+    - tidak setuju
+
+- intent: mood_great
+  examples: |
+    - sempurna
+    - hebat
+    - menakjubkan
+    - luar biasa
+    - saya merasa sangat baik
+    - hebat sekali
+    - sangat menakjubkan
+    - saya akan menyelamatkan dunia
+    - sangat gembira
+    - sangat bagus
+    - sangat sempurna
+    - sangat bagus
+    - sangat sempurna
+
+- intent: mood_unhappy
+  examples: |
+    - Mengerikan
+    - Saya sedih
+    - Saya merasa tidak enak badan
+    - Saya kecewa
+    - Sangat sedih
+    - Saya sangat sedih
+    - Sedih
+    - Sangat sedih
+    - Tidak bahagia
+    - Tidak baik
+    - Tidak begitu baik
+    - Sangat sedih
+    - Bukan begitu
+
+- intent: bot_challenge
+  examples: |
+    - Apakah Kamu bot?
+    - Apakah Kamu manusia?
+    - Apakah saya sedang berbicara dengan bot?
+    - Apakah saya sedang berbicara dengan manusia?
+
+- intent: thanks
+  examples: |
+    - Terima kasih
+    - Terima kasih banyak!
+    - Saya menghargai
+    - Terima kasih atas dukungan Anda
+    - Saya ucapkan terima kasih
+
+- intent: vpn_config
+  examples: |
+    - Konfigurasi VPN
+    - Pengaturan VPN
+    - Tutorial konfigurasi VPN
+    - Instalasi VPN
+    - Saya butuh bantuan mengkonfigurasi VPN saya
+    - Mengatur VPN
+    - Memulai VPN
+    - Bagaimana cara mengkonfigurasi akses VPN saya?
+    - Cara menginstal VPN
+    - Cara mengkonfigurasi VPN
+    - Cara mengatur VPN
+    - Akses VPN
+
+- intent: increase_cloud
+  examples: |
+    - Saya butuh penambahan kapasitas cloud
+    - Cloud kehabisan kapasitas
+    - Buka tiket untuk menambah kapasitas cloud
+    - Tiket baru untuk menambah kapasitas cloud
+    - Menambah ukuran kapasitas cloud
+    - Bagaimana cara menambah ukuran kapasitas cloud?
+    - Kekurangan kapasitas cloud
+
+- intent: troubleshoot_vpn
+  examples: |
+    - Perbaiki VPN saya
+    - Koneksi VPN terputus
+    - Saya mengalami masalah dengan VPN saya
+    - VPN tidak berfungsi
+    - VPN tidak bekerja
+    - Pemecahan masalah VPN
+    - Bagaimana cara memperbaiki VPN saya?
+    - VPN berhenti bekerja
+    - VPN sedang down
+    - Masalah VPN
+    - Apakah VPN saya berfungsi?
+    - Bisakah Anda memperbaiki VPN saya?
+
+- intent: setup_laptop
+  examples: |
+    - Menyiapkan Laptop
+    - Mengonfigurasi Laptop
+    - Langkah-langkah pertama untuk menyiapkan laptop
+    - Laptop baru, apa yang harus dilakukan
+    - Cara mengkonfigurasi laptop
+    - Pengaturan laptop
+    - Mengonfigurasi laptop
+    - Mengonfigurasi PC
+    - Bagaimana cara saya menyiapkan laptop saya?
+    - Saya butuh bantuan untuk menyiapkan laptop saya
+    - Cara memulai laptop
+    - Langkah-langkah pertama laptop
+
+- intent: reset_password
+  examples: |
+    - Mohon bantuan untuk reset psassword
+    - Reset psassword
+    - Lupa password
+    - Password terkunci
+    - Bantuan akses password
+    - Password tidak dapat digunakan
+    - Enable akun pincloud
+
+- intent: otorisasi_IT
+  examples: |
+    - Mohon bantuan untuk melakukan otorisasi PC
+    - Pemindahtanggungjawaban akses perangkat IT
+    - Pelimpahan tanggung jawab terhadap perangkat IT
+    - Bantuan pergeseran user penanggungjawab PC
+
+- intent: zoom_meeting
+  examples: |
+    - Mohon bantuan untuk pembuatan jadwal zoom meeting
+    - Permohonan peminjaman akun Zoom Meeting
+    - Jadwal Zoom Meeting
+    - Request Zoom meeting
+    - Pembuatan jadwal Zoom meeting
+
+- intent: inform_zoom
+  examples: |
+    - Judul kegiatannya {judul_kegiatan}
+    - {judul_kegiatan}
+    - Tanggal {date}
+    - {date}
+    - Lokasi {place}
+    - {place}
+  
+
+- intent: akun_email
+  examples: |
+    - Pengajuan akun email baru
+    - Pembuatan akun email baru
+    - Permohonan akun email baru
+    - akun email baru
+    - Bantuan pembuatan akun email baru
+    - Pembuatan akun Cloud baru
+
+- intent: kapasitas_cloud
+  examples: |
+    - Pengajuan akun cloud
+    - Pembuatan akun cloud
+    - Permohonan akun cloud
+    - Penambahan kuota cloud
+    - Kapasitas cloud
+
+# Here's an extended list of chitchat topics unrelated to laptops:
+- intent: out_of_scope
+  examples: |
+    - Siapa presiden Nigeria?
+    - Apakah Anda memiliki telepon seluler?
+    - Bagaimana cuaca hari ini?
+    - Apakah Anda tahu rekomendasi film yang bagus?
+    - Bagaimana cara memasak steak yang sempurna?
+    - Bisakah Anda menceritakan lelucon?
+    - Apa saja hobi yang menyenangkan untuk dicoba?
+    - Di mana saya bisa menemukan kedai kopi terdekat?
+    - Bagaimana cara meningkatkan kualitas tidur saya?
+    - Buku apa yang bagus untuk dibaca?
+    - Bagaimana cara memulai berkebun?
+    - Bisakah Anda menyarankan rutinitas olahraga yang bagus?
+    - Apa cara terbaik untuk bersantai setelah seharian bekerja?
+    - Bagaimana cara menghemat uang untuk belanja bahan makanan?
+    - Apa saja destinasi wisata yang menarik?
+    - Bagaimana cara melatih anak anjing?
+    - Bisakah Anda merekomendasikan podcast yang bagus?
+    - Apa resep makan malam yang cepat dan mudah?
+    - Bagaimana cara meningkatkan kemampuan berbicara di depan umum?
+    - Apa cara terbaik untuk mengatur lemari saya?
+    - Bagaimana cara menghilangkan sakit kepala secara alami?
+    - Bisakah Anda membantu saya dengan beberapa tips dekorasi rumah?
+    - Apa metode terbaik untuk mempelajari bahasa baru?
+    - Bagaimana cara membuat anggaran dan mematuhinya?
+    - Apa saja teknik manajemen stres yang efektif?
+    - Di mana saya dapat menemukan peluang menjadi sukarelawan di daerah saya?
+    - Bagaimana cara merencanakan pesta yang sukses?
+    - Apa manfaat meditasi?
+    - Bagaimana cara membuat lilin sendiri?
+    - Apa cara yang baik untuk mulai berolahraga secara teratur?
+    - Bisakah Anda menyarankan beberapa proyek DIY yang mudah?
+    - Bagaimana cara mengambil foto yang lebih baik dengan ponsel saya?
+    - Apa dasar-dasar keuangan pribadi?
+    - Bagaimana cara menjaga kesehatan tanaman dalam ruangan?
+    - Apa cara yang menyenangkan untuk menghabiskan akhir pekan?
+    - Bagaimana cara memilih hewan peliharaan yang tepat untuk keluarga saya?
+    - Apa saja tips untuk manajemen waktu yang lebih baik?
+    - Bagaimana cara membuat produk perawatan kulit sendiri?
+    - Apa strategi yang baik untuk belajar memasak?
+    - Bagaimana cara menulis resume yang menarik?
+    - Apa saja kegiatan yang ramah keluarga?
+    - Bagaimana cara agar tetap termotivasi untuk mencapai tujuan saya?
+    - Apa cara terbaik untuk mengatasi penundaan?
+    - Bagaimana cara memulai bisnis kecil?
+    - Apa saja permainan papan yang bagus untuk malam keluarga?
+    - Bagaimana cara meningkatkan pengaturan kantor rumah saya?
+    - Apa cara terbaik untuk membersihkan rumah saya secara efisien?
+    - Bagaimana cara membuat perhiasan sendiri?
+    - Apa saja cara kreatif untuk memberi hadiah?
+    - Bagaimana cara belajar memainkan alat musik?
+    - Apa saja praktik yang baik untuk makan sehat?
+    - Bagaimana cara menciptakan rutinitas tidur yang menenangkan?
+    - Apa cara menyenangkan untuk belajar tentang sejarah?
+    - Bagaimana cara meningkatkan keterampilan menulis saya?
+    - Apa saja kiat untuk hubungan interpersonal yang lebih baik?
+    - Bagaimana cara merawat mobil saya dengan benar?
+    - Apa saja cara inovatif untuk menggunakan teknologi?
+    - Bagaimana cara mengajari anak-anak tentang manajemen keuangan?
+    - Apa cara yang baik untuk tetap mendapatkan informasi tentang peristiwa terkini?
+    - Bagaimana cara meningkatkan fokus dan konsentrasi saya?
+    - Apa saja keterampilan penting untuk pengembangan pribadi?
+    - Bagaimana cara memilih asuransi perjalanan terbaik?
+    - Apa metode yang baik untuk belajar pemrograman?
+    - Bagaimana cara memulai rutinitas kebugaran baru?
+    - Apa saja cara untuk mengurangi sampah dalam kehidupan sehari-hari?
+    - Bagaimana cara mengelola file digital saya secara efektif?
+    - Apa saja strategi untuk menetapkan tujuan yang efektif?
+    - Bagaimana cara menemukan penawaran terbaik saat berbelanja?
+    - Apa cara yang baik untuk melatih kesadaran diri (mindfulness)?
+    - Bagaimana cara menjaga keseimbangan antara pekerjaan dan kehidupan pribadi yang sehat?
+    - Apa saja aktivitas luar ruangan yang menyenangkan?
+    - Bagaimana cara meningkatkan keterampilan memasak saya?
+    - Apa saja hal penting yang perlu diketahui tentang investasi?
+    - Bagaimana cara menjaga kesehatan mental saya?
+    - Apa cara terbaik untuk merencanakan perjalanan darat?
+    - Bagaimana cara memulai menulis jurnal?
+    - Apa saja kiat untuk membangun jaringan yang sukses?
+    - Bagaimana cara memanfaatkan waktu luang saya sebaik mungkin?
+    - Apa cara yang baik untuk meningkatkan kreativitas saya?
+    - Bagaimana cara agar tetap produktif saat bekerja dari rumah?
+    - Apa saja cara menyenangkan untuk merayakan acara spesial?
+    - Bagaimana cara mengelola email saya dengan lebih efektif?
+    - Apa saja kiat praktis untuk merapikan rumah saya?
+    - Bagaimana cara meningkatkan kemampuan mendengarkan saya?
+    - Apakah Anda orang Nigeria?
+    - Maksud saya, selain laptop, barang apa lagi yang Anda jual?
+
+
