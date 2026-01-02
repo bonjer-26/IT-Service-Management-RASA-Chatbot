@@ -1,0 +1,178 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - thanks
+  - vpn_config
+  - troubleshoot_vpn
+  - setup_laptop
+  - nlu_fallback
+  - increase_cloud
+  - reset_password
+  - otorisasi_IT
+  - zoom_meeting
+  - akun_email
+  - kapasitas_cloud
+
+responses:
+############################ Greetings
+  utter_greet:
+    - text: "Hi! Selamat datang di ITSM Divisi TI, portal layanan TI satu pintu. Apa yang bisa saya bantu hari ini?"
+      buttons:
+        - title: "Bantuan setup laptop"
+          payload: "/setup_laptop"
+        - title: "Konfigurasi akses VPN"
+          payload: "/vpn_config"
+        - title: "Reset Password"
+          payload: "/reset_password"
+        - title: "Otorisasi perangkat IT"
+          payload: "/otorisasi_IT"
+        - title: "Pembuatan link Zoom Meeting"
+          payload: "/zoom_meeting"
+        - title: "Pembuatan akun email"
+          payload: "/akun_email"
+        - title: "Penambahan kapasitas Cloud"
+          payload: "/kapasitas_cloud"
+
+  utter_reset_password:
+    - text: "Proses Autentikasi telah selesai dilakukan. Berikut link sementara untuk melakukan reset password. Note: Link reset password hanya berlaku selama 7 hari kerja. Segera lakukan perubahan password sesuai prosedur reset password."
+  
+  utter_otorisasi_IT:
+    - text: "Baik. Pmerintaan otorisasi akan ditindaklanjuti. Mohon tunggu sebentar."
+
+###########################################################
+  utter_ask_judul_kegiatan:
+    - text: "Mohon isi Form berikut:\
+            Judul kegiatan Zoom Meeting: (contoh: Koordinasi Internal Divisi TI)"
+
+  utter_ask_date:
+    - text: "Jadwal Zoom Meeting: (contoh: 15 Januari 2026 jam 09.00)"
+
+  utter_ask_place:
+    - text: "Meeting akan dilaksanakan di mana? (contoh: Zoom / Ruang Rapat / Hybrid)"
+
+  utter_zoom_meeting:
+    - text: |
+        Berikut detail Zoom Meeting:
+
+        Topic: {judul_kegiatan}
+        Time: {date}
+        Place: {place}
+
+        Join Zoom Meeting
+        https://pindad.zoom.us/j/88018906490?pwd=4XPBbANY2eMEtDEsCSTdmEkt569vBV.1
+
+        Meeting ID: 880 1890 6490
+        Passcode: 169945
+  
+
+###########################################################
+
+  utter_kapasitas_cloud:
+    - text: "Penambahan kapasitas cloud dapat dilakukan. Batas maksimum kapasitas cloud adalah 50GB"
+
+  utter_cheer_up:
+    - text: "Mungkin ini dapat sedikit menghibur Anda:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Apakah respond ini membantu anda?"
+
+  utter_happy:
+    - text: "Baiklah, lanjutkan!"
+
+  utter_goodbye:
+    - text: "Sampai jumpa"
+
+  utter_iamabot:
+    - text: "Saya adalah bot, powered by ITSM Divisi TI"
+
+  utter_thanks:
+    - text: "Sama-sama, senang bisa membantu Anda."
+
+############################ VPN
+  utter_config_vpn:
+    - text: "Konfigurasi VPN membutuhkan permohonan izin dan persetujuan pimpinan untuk kebutuhan akses VPN. Untuk informasi lebih lanjut, apakah Anda ingin diteruskan kepada Helpdesk layanan TI?"
+      buttons:
+        - title: "Setup laptop"
+          payload: "/setup_laptop"
+        - title: "VPN"
+          payload: "/vpn_config"
+
+  utter_troubleshoot_vpn:
+    - text: "Permasalahan VPN dapat disampaikan kepada Helpdesk Layanan TI. Melalui kanal berikut ini: 1.2.3"
+
+  #utter_setup_laptop:
+  #  - text: "Kebutuhan perubahan konfigurasi laptop perlu disampaikan kepada Helpdesk Layanan TI. Untuk informasi lebih lanjut, apakah Anda ingin diteruskan kepada Helpdesk layanan TI?"
+
+# Fallbacks
+  # nlu_fallback
+  utter_please_rephrase:
+    - text: "Mohon maaf, saya tidak mengerti. Bisakah Anda menjelaskannya sekali lagi?"
+
+  # Out of scope questions
+  utter_out_of_scope:
+    - text: "Mohon maaf, saya tidak dapat memenuhi permintaan dimaksud. Karena cakupan informasi diluar layanan ITSM. Terima kasih"
+  
+  utter_default:
+    - text: "Maaf, saya belum yakin. Bisa pilih salah satu?"
+      buttons:
+        - title: "Setup laptop"
+          payload: "/setup_laptop"
+        - title: "VPN"
+          payload: "/vpn_config"
+
+  
+  utter_set_up_laptop:
+    - text: "Baik. Konfigurasi laptop seperti apa yang anda butuhkan?"
+      buttons:
+        - title: "Setup laptop"
+          payload: "/setup_laptop"
+        - title: "VPN"
+          payload: "/vpn_config"
+
+forms:
+  zoom_meeting_form:
+    required_slots:
+      - judul_kegiatan
+      - date
+      - place
+
+slots:
+  judul_kegiatan:
+    type: text
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: zoom_meeting_form
+            requested_slot: judul_kegiatan
+
+  date:
+    type: text
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: zoom_meeting_form
+            requested_slot: date
+
+  place:
+    type: text
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: zoom_meeting_form
+            requested_slot: place
+
+actions:
+  - action_utter_help_message
+  - action_zoom_meeting
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
