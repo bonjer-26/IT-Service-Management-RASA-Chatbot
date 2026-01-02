@@ -1,5 +1,9 @@
 ## IT Service Management RASA Chatbot
 
+<p align="center">
+  <img width="853" height="463" alt="readme_pic1" src="https://github.com/user-attachments/assets/db192c5c-c3c0-4e76-9897-c54c36b4ccdb" />
+</p>
+
 This project involved developing an IT Helpdesk chatbot using the RASA framework, which serves as a user assistant for Information Technology Systems Management (TISM). The chatbot interacts with users to understand their requests and automate helpdesk operations.
 
 The chatbot was built using Python and FastAPI to manage API endpoints and facilitate communication between the chatbot and users. All chat dialogs are stored in a PostgreSQL database for analysis and future chatbot performance improvements.
