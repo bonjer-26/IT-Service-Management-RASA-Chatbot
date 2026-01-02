@@ -1,0 +1,112 @@
+import re
+from typing import List
+from fastapi import APIRouter, FastAPI, Request, Depends, Form
+from fastapi.responses import HTMLResponse
+from fastapi.templating import Jinja2Templates
+from db_schema.schemas import LaptopBase, LaptopDisplay, ChatBase, ChatDisplay
+from db.models import Laptop, Chat
+from db.database import get_db, SessionLocal
+from sqlalchemy.orm.session import Session 
+from db import views
+import requests
+import datetime
+import json
+
+router = APIRouter()
+template = Jinja2Templates(directory="app/templates")
+
+chatbot_user_dialog = []
+
+def save_dialog():
+    db : Session = SessionLocal()
+    now = datetime.datetime.now()
+    new_chat = Chat(
+        date = str(now),
+        conversation = str(chatbot_user_dialog)
+    )
+    db.add(new_chat)
+    db.commit()
+    db.refresh(new_chat)
+
+# send chat from app to rasa server and get response
+def rasa_response(message):
+    # ✅ ALWAYS send message as text (REST channel requirement)
+    payload = {
+        "message": message
+    }
+
+    req = requests.post(
+        "http://rasa_server:5005/webhooks/rest/webhook",
+        json=payload
+    )
+
+    responses = req.json()
+
+    texts = []
+    buttons = []
+
+    for r in responses:
+        if "text" in r:
+            texts.append(r["text"])
+        if "buttons" in r:
+            buttons.extend(r["buttons"])
+
+    chatbot_msg = " ".join(texts)
+
+    chatbot_user_dialog.append((message, chatbot_msg))
+    save_dialog()
+
+    print("RASA PAYLOAD SENT:", payload)
+    print("RASA RAW RESP:", responses)
+
+    return {
+        "text": chatbot_msg,
+        "buttons": buttons
+    }
+
+
+@router.get("/", response_class=HTMLResponse)
+async def index(request: Request):
+    return template.TemplateResponse("pages/base.html", {"request": request})
+
+extra_list = []
+
+@router.post("/message")
+async def message(chat: ChatBase):
+    msg = chat.dict()
+    rasa_data = rasa_response(msg["conversation"])
+
+    return {
+        "message": rasa_data["text"],
+        "buttons": rasa_data["buttons"],
+        "extra": extra_list
+    }
+
+
+def check_slot(text):
+    extra_list.clear()
+    pattern = r'(\w+)###'
+    match = re.search(pattern, text)
+    if match:
+        print("There is a match")
+        db : Session = SessionLocal()
+        laptops_slot = db.query(Laptop).filter(Laptop.description.ilike(f'%{match.group(1)}%')).all()
+        for laptop in laptops_slot:
+            extra_list.append(laptop)
+    else:
+        print("No match found")
+    
+
+@router.get("/about", response_class=HTMLResponse)
+async def index(request: Request):
+    return template.TemplateResponse("pages/about.html", {"request": request})
+
+
+@router.post("/chat/create")
+async def create_chat(request: ChatBase, db: Session = Depends(get_db)):
+    return views.create_chat(db, request)
+
+
+@router.get("/all/chat",response_model=List[ChatDisplay])
+async def get_chats(db: Session = Depends(get_db)):
+    return views.get_all_chat(db)
