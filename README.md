@@ -1,7 +1,7 @@
 ## IT Service Management RASA Chatbot
 
 <p align="center">
-  <img width="853" height="463" alt="readme_pic1" src="https://github.com/user-attachments/assets/db192c5c-c3c0-4e76-9897-c54c36b4ccdb" />
+  <img width="850" height="406" alt="readme_pic2" src="https://github.com/user-attachments/assets/4db60e2d-175a-4285-b8ee-19ee7f5c6695" />
 </p>
 
 This project involved developing an IT Helpdesk chatbot using the RASA framework, which serves as a user assistant for Information Technology Systems Management (TISM). The chatbot interacts with users to understand their requests and automate helpdesk operations.
