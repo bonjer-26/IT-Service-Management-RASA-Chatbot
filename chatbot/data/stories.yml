@@ -1,0 +1,85 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: anything thanks
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+
+# Stories related to vpn configuration
+- story: vpn configuration
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: vpn_config
+  - action: utter_config_vpn
+
+- story: vpn roubleshoot
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: troubleshoot_vpn
+  - action: utter_troubleshoot_vpn
+
+
+- story: reset password
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: reset_password
+  - action: utter_reset_password
+
+- story: otorisasi perangkat IT
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: otorisasi_IT
+  - action: utter_otorisasi_IT
+
+- story: create zoom meeting
+  steps:
+  - intent: zoom_meeting
+  - action: zoom_meeting_form
+  - active_loop: zoom_meeting_form
+
+- story: set_up_laptop
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: setup_laptop
+  - action: utter_set_up_laptop
+
+#- story: laptop help
+#  steps:
+#    - intent: setup_laptop
+#    - action: action_utter_help_message
+
+# Stories related to buying a laptop (happy path)
